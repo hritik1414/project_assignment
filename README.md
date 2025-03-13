@@ -109,8 +109,32 @@ To use the Streamlit interface with Docker, run this:
 ```bash
 docker run -p 8501:8501 <image-name> streamlit run streamlit.py
 ```
-he Streamlit page will be available at http://127.0.0.1:8501.
+#📌 Postman API Testing Instructions
 
-### Notes
-The Dockerfile uses Python 3.9. If you need GPU support (e.g., for faster machine learning), try using a PyTorch image with CUDA instead.
-Make sure all packages listed in requirements.txt are installed properly to avoid errors about missing modules.
+You can test the FastAPI backend using Postman by following these steps:
+
+## 1 Open Postman and Create a New Request
+Select POST request.
+Enter the request URL:
+http://127.0.0.1:8000/predict
+## 2 Set Up Authentication
+Go to the Authorization tab.
+Select Basic Auth.
+Enter the following credentials:
+Username: admin
+Password: secret
+## 3 Upload an Image
+Navigate to the Body tab.
+Select form-data.
+Add a new key with:
+Key: file
+Type: File
+Value: Select an image file (.png, .jpg, .jpeg).
+## 4 Send the Request
+Click on the Send button.
+If successful, you will receive a JSON response with the predicted class:
+```bash
+{
+  "predicted_class": "<class_name>"
+}
+```
