@@ -1,3 +1,15 @@
+# MyModel - Trained Deep Learning Model
+
+## 📌 Download the Model
+You can download the trained model from Google Drive:
+
+🔗 **[Download myModel.pth]([YOUR_GOOGLE_DRIVE_LINK_HERE](https://drive.google.com/file/d/1ccyfQCrYv98a_o5rUgNqfyJwQnjQ6660/view?usp=sharing))**
+
+## 📖 Usage Instructions
+1. Download the `myModel.pth` file.
+2. Place it in the appropriate directory.
+3. Load the model in Python:
+   
 # FastAPI-based ML Inference Service
 
 This project is a web service built with FastAPI that runs machine learning predictions using a pre-trained model. It also comes with a Streamlit interface to make it easy for users to interact with the model.
