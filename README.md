@@ -80,3 +80,37 @@ If you see errors like ModuleNotFoundError for packages (e.g., click or h11), tr
 pip install --upgrade pip
 pip install --no-cache-dir -r requirements.txt
 ```
+
+## Running the Project with Docker
+If you prefer using Docker, here’s how to do it:
+
+### 1. Clone the Repository
+
+Download the project files and enter the folder:
+```bash
+git clone <repository_url>
+cd <repository_name>
+```
+### 2. Build and Run the Docker Container
+
+Build the Docker image and start the container:
+```bash
+# Build the Docker image
+docker build -t <image-name> .
+
+# Run the container
+docker run -p 8000:8000 <image-name>
+```
+The API will be available at http://127.0.0.1:8000. You can see the interactive docs at http://127.0.0.1:8000/docs.
+
+### 3. Run the Streamlit Frontend in Docker
+
+To use the Streamlit interface with Docker, run this:
+```bash
+docker run -p 8501:8501 <image-name> streamlit run streamlit.py
+```
+he Streamlit page will be available at http://127.0.0.1:8501.
+
+### Notes
+The Dockerfile uses Python 3.9. If you need GPU support (e.g., for faster machine learning), try using a PyTorch image with CUDA instead.
+Make sure all packages listed in requirements.txt are installed properly to avoid errors about missing modules.
