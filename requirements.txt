@@ -9,3 +9,4 @@ python-multipart
 click
 h11
 starlette
+pydantic
