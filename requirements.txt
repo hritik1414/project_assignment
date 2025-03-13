@@ -10,3 +10,4 @@ click
 h11
 starlette
 pydantic
+gradio==5.20.1
