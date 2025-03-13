@@ -113,24 +113,24 @@ docker run -p 8501:8501 <image-name> streamlit run streamlit.py
 
 You can test the FastAPI backend using Postman by following these steps:
 
-## 1 Open Postman and Create a New Request
+## 1) Open Postman and Create a New Request
 Select POST request. <br>
 Enter the request URL: <br>
 http://127.0.0.1:8000/predict <br>
-## 2 Set Up Authentication
+## 2) Set Up Authentication
 Go to the Authorization tab. <br>
 Select Basic Auth. <br>
 Enter the following credentials: <br>
 Username: admin <br>
 Password: secret <br>
-## 3 Upload an Image
+## 3) Upload an Image
 Navigate to the Body tab. <br>
 Select form-data. <br>
 Add a new key with: <br>
 Key: file <br>
 Type: File <br>
 Value: Select an image file (.png, .jpg, .jpeg). <br>
-## 4 Send the Request
+## 4) Send the Request
 Click on the Send button. <br>
 If successful, you will receive a JSON response with the predicted class: <br>
 ```bash
@@ -152,5 +152,12 @@ Displays both the original and Grad-CAM visualized images side by side.
 
 Run the following command to launch the Gradio interface for prediction and Grad-CAM visualization:
 ```bash
-python gradio_gradcam.py
+python3 gradio_gradcam.py
 ```
+# Notes
+
+The Dockerfile uses Python 3.9.
+
+If you need GPU support, consider using a PyTorch image with CUDA.
+
+Ensure all packages in requirements.txt are installed properly to avoid missing module errors.
