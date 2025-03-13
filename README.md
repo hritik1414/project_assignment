@@ -138,3 +138,19 @@ If successful, you will receive a JSON response with the predicted class: <br>
   "predicted_class": "<class_name>"
 }
 ```
+# Explainability
+
+## Explainability using Grad-CAM (gradio_gradcam.py)
+
+Uses Grad-CAM to visualize the model’s decision-making process.
+
+Extracts the third-to-last feature layer as the target for Grad-CAM.
+
+Generates a heatmap overlay highlighting important regions for classification.
+
+Displays both the original and Grad-CAM visualized images side by side.
+
+Run the following command to launch the Gradio interface for prediction and Grad-CAM visualization:
+```bash
+python gradio_gradcam.py
+```
