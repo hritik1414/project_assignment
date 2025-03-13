@@ -1,67 +1,70 @@
-# FastAPI-based ML Inference Service  
+# FastAPI-based ML Inference Service
 
-This project provides a FastAPI-based web service for running machine learning inferences using a pre-trained model. It also includes a Streamlit interface for user-friendly interaction.  
+This project is a web service built with FastAPI that runs machine learning predictions using a pre-trained model. It also comes with a Streamlit interface to make it easy for users to interact with the model.
 
-## Prerequisites  
+## Prerequisites
 
-Ensure you have the following installed on your system:  
+Before you start, make sure you have these installed on your computer:
 
-- Python 3.9 or later  
-- pip (Python package manager)  
-- Virtual environment tool (optional but recommended)  
-- Docker (if running with Docker)  
+- Python 3.9 or a newer version  
+- `pip` (the Python package manager)  
+- A virtual environment tool (this is optional but a good idea)  
+- Docker (only if you want to use Docker)  
 
----
+## Running the Project Without Docker
 
-## Running the Project Without Docker  
+Follow these steps to set up and run the project without Docker:
 
-### 1. Clone the Repository  
+### 1. Clone the Repository
 
+Get the project files from the repository and go into the project folder:
+
+```bash
 git clone <repository_url>
 cd <repository_name>
-2. Create and Activate a Virtual Environment (Recommended)
-On macOS/Linux:
+```
 
+### 2. Create and Activate a Virtual Environment (Recommended)
+
+Set up a virtual environment to keep things organized. Here’s how to do it:
+
+On macOS or Linux:
+```bash
 python3 -m venv venv
 source venv/bin/activate
-On Windows (Command Prompt):
-
+```
+On Windows (using Command Prompt):
+```bash
 python -m venv venv
 venv\Scripts\activate
-3. Install Dependencies
+```
+### 3. Install Dependencies
+
+Install all the required Python packages:
+```bash
 pip install --no-cache-dir -r requirements.txt
-4. Running the FastAPI Server
+```
+### 4. Run the FastAPI Server
+
+Start the FastAPI server with this command:
+``` bash
 uvicorn app:app --host 0.0.0.0 --port 8000 --reload
-By default, the API will be available at http://127.0.0.1:8000.
-You can access the interactive API documentation at http://127.0.0.1:8000/docs.
+```
+Once it’s running, you can visit the API at http://127.0.0.1:8000. For more details, check the interactive docs at http://127.0.0.1:8000/docs.
 
-5. Running the Streamlit Frontend
+### 5. Run the Streamlit Frontend
+
+Launch the Streamlit interface with this command:
+```bash
 streamlit run streamlit.py
-This will launch a web-based interface where users can interact with the model.
+```
+This opens a web page where you can use the model easily.
 
-Troubleshooting
-# If you encounter missing package errors (e.g., ModuleNotFoundError for `click` or `h11`), try reinstalling dependencies:  
+### Troubleshooting
+
+If you see errors like ModuleNotFoundError for packages (e.g., click or h11), try updating pip and reinstalling the packages:
+
+```bash
 pip install --upgrade pip
 pip install --no-cache-dir -r requirements.txt
-Running the Project with Docker
-
-1. Clone the Repository
-git clone <repository_url>
-cd <repository_name>
-2. Build and Run the Docker Container
-# Build the Docker image  
-docker build -t fastapi-ml-app .
-
-# Run the container  
-docker run -p 8000:8000 fastapi-ml-app
-The API will now be accessible at http://127.0.0.1:8000.
-The interactive API documentation will be available at http://127.0.0.1:8000/docs.
-
-3. Running the Streamlit Frontend in Docker
-docker run -p 8501:8501 fastapi-ml-app streamlit run streamlit.py
-The Streamlit interface will be available at http://127.0.0.1:8501.
-
-Notes
-
-The Dockerfile is set up to use Python 3.9. If you need GPU support, consider using an official PyTorch image with CUDA.
-Ensure all dependencies in requirements.txt are correctly installed to avoid missing module errors.
+```
