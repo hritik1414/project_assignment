@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+torch
+torchvision
+pillow
+grad-cam
+streamlit
+python-multipart
+click
+h11
+starlette
