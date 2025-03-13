@@ -3,7 +3,7 @@
 ## 📌 Download the Model
 You can download the trained model from Google Drive:
 
-🔗 **[Download myModel.pth]([YOUR_GOOGLE_DRIVE_LINK_HERE](https://drive.google.com/file/d/1ccyfQCrYv98a_o5rUgNqfyJwQnjQ6660/view?usp=sharing))**
+🔗 **([YOUR_GOOGLE_DRIVE_LINK_HERE](https://drive.google.com/file/d/1ccyfQCrYv98a_o5rUgNqfyJwQnjQ6660/view?usp=sharing))**
 
 ## 📖 Usage Instructions
 1. Download the `myModel.pth` file.
