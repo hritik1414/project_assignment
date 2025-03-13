@@ -109,7 +109,7 @@ To use the Streamlit interface with Docker, run this:
 ```bash
 docker run -p 8501:8501 <image-name> streamlit run streamlit.py
 ```
-#📌 Postman API Testing Instructions
+# Postman API Testing Instructions
 
 You can test the FastAPI backend using Postman by following these steps:
 
