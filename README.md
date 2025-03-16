@@ -151,9 +151,16 @@ Generates a heatmap overlay highlighting important regions for classification.
 Displays both the original and Grad-CAM visualized images side by side.
 
 Run the following command to launch the Gradio interface for prediction and Grad-CAM visualization:
+### For Mac:
 ```bash
 python3 gradio_gradcam.py
 ```
+
+### For Windows:
+```bash
+python gradio_gradcam.py
+```
+
 # Notes
 
 The Dockerfile uses Python 3.9.
